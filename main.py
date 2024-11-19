@@ -6,9 +6,8 @@ import random
 from dotenv import load_dotenv
 
 
-# .env 파일에서 OpenAI API 키 로드
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# Set the OpenAI API key
+openai.api_key = api_key
 
 if not api_key:
     raise ValueError("API 키가 설정되지 않았습니다. .env 파일을 확인하세요.")
